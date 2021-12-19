@@ -1,8 +1,3 @@
 module.exports = {
-  extends: ["next", "prettier"],
-  settings: {
-    next: {
-      rootDir: ["apps/*/", "packages/*/"],
-    },
-  },
+  extends: ["@react-native-community", "prettier"],
 };

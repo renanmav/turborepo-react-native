@@ -1,19 +1,29 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "@acme/turborepo-react-native",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\" && sort-package-json \"package.json\" \"packages/*/package.json\" \"apps/*/package.json\"",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "pods": "turbo run pods"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
+    "sort-package-json": "^1.53.1",
     "turbo": "latest"
   },
   "turbo": {
@@ -30,13 +40,14 @@
       "lint": {
         "outputs": []
       },
+      "pods": {
+        "outputs": [
+          "ios/Pods/**"
+        ]
+      },
       "dev": {
         "cache": false
       }
     }
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
   }
 }

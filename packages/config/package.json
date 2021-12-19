@@ -1,13 +1,13 @@
 {
-  "name": "config",
+  "name": "@acme/config",
   "version": "0.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "main": "index.js",
   "files": [
     "eslint-preset.js"
   ],
   "dependencies": {
-    "eslint-config-next": "^12.0.3",
+    "@react-native-community/eslint-config": "^3.0.1",
     "eslint-config-prettier": "^8.3.0"
   }
 }
