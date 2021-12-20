@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "dev": "yarn android",
     "ios": "react-native run-ios",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "pods": "cd ios && pod install",
     "start": "react-native start"
   },
