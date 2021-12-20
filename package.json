@@ -11,7 +11,10 @@
       "**/react",
       "**/react-dom",
       "**/react-native",
-      "**/react-native/**"
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**",
+      "**/expo-*"
     ]
   },
   "scripts": {

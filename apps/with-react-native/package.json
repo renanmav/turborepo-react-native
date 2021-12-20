@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "dev": "yarn ios",
+    "dev": "yarn android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "pods": "cd ios && pod install",

@@ -1,0 +1,6 @@
+{
+  "extends": "@acme/tsconfig/react-native.json",
+  "compilerOptions": {
+    "strict": true
+  }
+}
